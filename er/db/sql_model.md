@@ -39,7 +39,7 @@
 
 - espectroradiometros (Firmas)
 - niveles - subniveles
-- agronomicos
+- agronomicos (similar al espectoradiometro )
 
 2. Admin
 
@@ -48,7 +48,7 @@
 - errores
 - anomalos
 
-### Tablas Clientes
+### Tablas Clientes ✖️
 
 **niveles - subniveles**
 
@@ -84,7 +84,7 @@ _*agronomicos*_
 
 ### Tablas Admin
 
-**direcciones** **(EC)**
+**direcciones** **(EC)** ✖️
 
 - id **(int serial pk)**
 - archivo **(File)**
@@ -92,36 +92,36 @@ _*agronomicos*_
 - Canton **(Varchar)**
 - Parroquia **(Varchar)**
 
-**Teams** **(ED)**
+**Teams** **(ED)** ✖️
 
 - id **(INT SERIAL PK)**
 - nombre_proyecto **(VARCHAR(65))**
 - descripcion
 - direcciones **(Int serial pk)**
 
-**variables**
+**variables** ✖️
 
 - id **(INT SERIAL PK)**
 - nombre **(VARCHAR(75))**
 
-**_equipamientos_**
+**_equipamientos_** ✖️
 
 - id **(INT SERIAL PK)**
 - id_teams **(INT FK)**
 - nombre_equipo **(VARCHAR(75))**
 - rango_espectral_inicial **(INT)**
 - rango_espectral_final **(INT)**
-- numero_serie **(TEXT)**
+- numero_serie **(TEXT Optional)**
 - ancho_banda **(FLOAT)**
-- fecha_calibracion **(DATE)**
+- fecha_calibracion **(DATE Optional)**
 - variable_id **(INT PK)**
 
-**_errores_** **(ED/EC)**
+**_errores_** **(ED/EC)** ✖️
 
 - error_id **(INT SERIAL PK)**
 - error_nombre **(VARCHAR(65))**
 
-**_anomalos_** **(ED)**
+**_anomalos_** **(ED)** ✖️
 
 - id **(INT SERIAL PK)**
 - numero_medicion_atipica **(INT)**
